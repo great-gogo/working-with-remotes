@@ -54,7 +54,7 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - name: "job"
+      - name: "display variables"
         run: |
           echo ${{ vars.JOB_NAME}}
     
