@@ -31,12 +31,11 @@ jobs:
     steps:
     - name: ding
       run: |
-        curl --request POST --url https://api.github.com/repos/${{ github.repository }}/issues \
-        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }} \
-        --header 'content-type: application/json' \
+        curl --request POST --url https://api.github.com/repos/${{ github.repository }}/issues 
+        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }} 
+        --header 'content-type: application/json' 
         -- data '{
                "title": "Failure: ${{ inputs.title }}",
                "body": "Details: ${{ inputs.body }}" 
-        }'\
-        --fail
+        }'   --fail
         
